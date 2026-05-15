@@ -27,7 +27,34 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-slate-900">
+        <header className="border-b border-slate-200 bg-white">
+          <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+            <div className="text-lg font-semibold">Portfolio</div>
+            <div className="flex gap-4">
+              <a href="/" className="text-slate-700 transition hover:text-slate-900">
+                Home
+              </a>
+              <a href="/about" className="text-slate-700 transition hover:text-slate-900">
+                About
+              </a>
+              <a href="/projects" className="text-slate-700 transition hover:text-slate-900">
+                Projects
+              </a>
+            </div>
+          </nav>
+        </header>
+
+        <main className="flex-1 mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
+          {children}
+        </main>
+
+        <footer className="border-t border-slate-200 bg-white">
+          <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-4 text-sm text-slate-500 sm:px-6">
+            © {new Date().getFullYear()} Your Name. All rights reserved.
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
