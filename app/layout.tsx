@@ -51,7 +51,7 @@ export default function RootLayout({
 
         <footer className="border-t border-slate-200 bg-white">
           <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-4 text-sm text-slate-500 sm:px-6">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Neo Clark. All rights reserved.
           </div>
         </footer>
       </body>
