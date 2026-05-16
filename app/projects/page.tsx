@@ -48,14 +48,14 @@ export default function ProjectsPage() {
       : projects.filter((project) => project.tags.includes(activeFilter));
 
   return (
-    <main className="min-h-screen bg-white px-4 py-12 text-slate-900 sm:px-6 lg:px-8">
-      <section className="mx-auto max-w-5xl">
+    <main className="min-h-screen px-4 py-12 text-foreground sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl rounded-4xl border border-surface surface-strong p-8 shadow-glow backdrop-blur-xl">
         <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Projects</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-muted">Projects</p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             Selected work
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-muted">
             Filter through a few highlighted projects to see how I apply JavaScript, CSS, and Python to solve real problems and build polished experiences.
           </p>
         </div>
@@ -66,10 +66,10 @@ export default function ProjectsPage() {
               key={tag}
               type="button"
               onClick={() => setActiveFilter(tag)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                 activeFilter === tag
-                  ? "border-slate-900 bg-slate-900 text-white"
-                  : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                  ? "border border-primary bg-primary text-white"
+                  : "border border-surface surface text-foreground hover-surface-strong"
               }`}
             >
               {tag}
